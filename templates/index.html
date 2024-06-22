@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>DogoBook</title>
+    <link href="{{ url_for('static', filename='ayudante.css') }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='engine0/style.css') }}" />
+    <script type="text/javascript" src="{{ url_for('static', filename='engine0/jquery.js') }}"></script>
+</head>
+<body>
+    <header>
+        <h1>DogoBook</h1>
+    </header>
+
+    <div class="ws_shadow"></div>
+    <div style="background-color: antiquewhite; padding: 15px;">
+        <ul>
+            <li><a href="#caja02">SOBRE NOSOTROS</a></li>
+            <li><a href="#caja06">GALERIA</a></li>
+            <li><a href="#caja18">INFORMACION</a></li>
+            <li><a href="{{ url_for('pedidos') }}">PEDIDOS</a></li>
+            <li><a href="{{ url_for('adopcion') }}">ADOPCIÓN</a></li> 
+        </ul>
+    </div>
+
+    <div id="caja10">
+        <div id="caja02">
+            <p>¡Bienvenidos a nuestro refugio virtual de adopción de perros! Aquí, cada latido cuenta.</p>
+            <p>Nuestro objetivo es encontrar un hogar amoroso para cada uno de nuestros amigos de cuatro patas...</p>
+        </div>
+
+        <div id="caja11">
+            <img src="{{ url_for('static', filename='images/galeria08.jpg') }}" alt="" width="600">
+        </div>
+    </div>
+
+    <div id="caja06">
+        <h2>Galería</h2>
+        <div class="cajas">
+            <div><img src="{{ url_for('static', filename='images/galeria01.jpg') }}"></div>
+            <div><img src="{{ url_for('static', filename='images/galeria02.jpg') }}"></div>
+            <div><img src="{{ url_for('static', filename='images/galeria03.jpg') }}"></div>
+            <div><img src="{{ url_for('static', filename='images/galeria04.jpg') }}"></div>
+            <div><img src="{{ url_for('static', filename='images/galeria05.jpg') }}"></div>
+            <div><img src="{{ url_for('static', filename='images/galeria06.jpg') }}"></div>
+            <div><img src="{{ url_for('static', filename='images/galeria07.jpg') }}"></div>
+            <div><img src="{{ url_for('static', filename='images/galeria09.jpg') }}"></div>
+        </div>
+    </div>
+
+    <div id="caja18">
+        <h2>Información</h2>
+        <div id="caja16">
+            <video id="video01" style="width: 600px;" controls loop>
+                <source src="{{ url_for('static', filename='video01.mp4') }}" type="video/mp4">
+            </video>
+        </div>
+        <div><img src="{{ url_for('static', filename='images/dinomo.png') }}" alt="Dinocorp" width="80"></div>
+    </div>
+
+</body>
+</html>
+

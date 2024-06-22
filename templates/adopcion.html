@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Perros en Adopción</title>
+    <link href="{{ url_for('static', filename='estilos1.css') }}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>Perros en Adopción</h1>
+        <a href="{{ url_for('agregar_perro') }}">Agregar Nuevo Perro</a>
+    </header>
+
+    <div class="cajas">
+        {% if error %}
+            <div class="error">{{ error }}</div>
+        {% endif %}
+        
+        {% for perro in perros %}
+            <div class="perro">
+                <h2>{{ perro.nombre }}</h2>
+                <p>Raza: {{ perro.raza }}</p>
+                <p>Edad: {{ perro.edad }} años</p>
+                <p>{{ perro.descripcion }}</p>
+                <img src="{{ url_for('static', filename='uploads/' ~ perro.imagen) }}" alt="{{ perro.nombre }}">
+                <form action="{{ url_for('eliminar_perro', perro_id=perro.id) }}" method="post">
+                    <button type="submit">Eliminar</button>
+                </form>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
+
+
+

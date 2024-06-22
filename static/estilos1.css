@@ -1,0 +1,102 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+.cajas {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.perro {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 40px); /* Full width minus margins */
+    max-width: 300px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.perro h2 {
+    margin: 0 0 10px;
+}
+
+.perro p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.perro img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.perro form {
+    margin-top: 15px;
+}
+
+.perro button {
+    background-color: #FF5722;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.perro button:hover {
+    background-color: #E64A19;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 600px) {
+    header a {
+        font-size: 16px;
+    }
+
+    .perro {
+        width: calc(100% - 40px); /* Full width minus margins */
+    }
+}
